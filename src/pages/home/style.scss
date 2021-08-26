@@ -1,0 +1,78 @@
+.home-page {
+  height: 100vh;
+  background-image: url('../../assets/bg-home.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  .slogan {
+    padding: 0 15px;
+    width: 50%;
+    text-align: left;
+    
+    h1 {
+      font-size: 7rem;
+      color: var(--primary-color);
+    }
+
+    button {
+      padding: 1rem 5rem;
+      outline: none;
+      border: none;
+      background-color: var(--background-color);
+      border: .125rem solid var(--primary-color);
+      border-radius: 2rem;
+      color: var(--primary-color);
+      margin: 3rem 0;
+      cursor: pointer;
+      font-weight: 600;
+      transition: .5s ease-in-out;
+
+      &:hover {
+        background-color: var(--primary-color);
+        color: var(--white);
+      }
+  }
+  }
+}
+
+#about {
+  .grid-about {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    column-gap: 30px;
+    margin-bottom: 20px;
+  }
+  img {
+    border-radius: 2rem;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+        rgba(17, 17, 26, 0.1) 0px 16px 56px,
+        rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  }
+
+  .about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-slogan {
+    padding: 4rem;
+    background-color: var(--white);
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    transform: translateX(-10rem);
+    text-align: center;
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 3rem;
+      color: var(--grey);
+    }
+  }
+}

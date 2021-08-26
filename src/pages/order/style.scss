@@ -1,0 +1,28 @@
+.shop {
+  padding: 0;
+
+  .banner {
+    height: 320px;
+    background-image: url('../../assets/banner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-flow: column;
+    padding-top: 60px;
+    color: var(--white);
+
+    .banner-paths {
+      display: flex;
+
+      .banner-path {
+        padding: 5px;
+        font-size: 14px;
+      }
+
+      svg {
+        width: 20px;
+        fill: var(--white);
+      }
+    }
+  }
+}

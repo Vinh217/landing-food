@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { Redirect, Route, Switch } from 'react-router-dom';
+import './App.scss';
+import CartModel from './components/cartmodel';
+import Footer from './components/footer';
+import Header from './components/header';
+import './grid.scss'
+import HomePage from './pages/home';
+import OrderOnline from './pages/order';
+
 
 function App() {
+  const [isActive,setIsActive] = useState(false);
+  const handleClickCart = (data) => {
+    setIsActive(data);
+  }
+
+  const handleCartButton = (data) => {
+    setIsActive(data);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header handleClickCart={handleCartButton}/>
+      <CartModel handleClick={handleClickCart} isActive={isActive}/>
+      <Switch >
+      <Redirect from='/home' to='/' exact />
+        <Route path="/" component={HomePage} exact />
+        <Route path="/order" component={OrderOnline} />
+      </Switch>
+      <Footer />
     </div>
   );
 }

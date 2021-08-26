@@ -1,0 +1,169 @@
+.order-list {
+  .food-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    grid-template-rows: repeat(4, minmax(100px, 1fr));
+    gap: 20px;
+  }
+
+  .food-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: var(--background-color);
+    box-shadow: rgba($color: #646474, $alpha: 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+
+    &:hover {
+      .food-cart {
+        // display: block;
+        transform: translate(-20px,40px);
+
+      }
+
+      .food-heart {
+        transform: translate(-20px,10px);
+      }
+    }
+
+    .food-heart {
+      position: absolute;
+      right:0;
+      top: 0;
+      color: var(--white);
+      border: 2px solid rgba($color: #221d1d, $alpha: 0.5);
+      border-radius: 50%;
+      font-size: 25px;
+      transform: translate(25px,10px);
+      background-color: rgba($color: #221d1d, $alpha: 0.8);
+      transition: all 0.4s;
+
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+
+    .food-cart {
+      position: absolute;
+      right:0;
+      top: 0;
+      color: var(--white);
+      transform: translate(25px,40px);
+      border: 2px solid rgba($color: #221d1d, $alpha: 0.5);
+      border-radius: 50%;
+      font-size: 25px;
+      background-color: rgba($color: #221d1d, $alpha: 0.8);
+      transition: all .4s;
+
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+
+    img {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .food-content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      .food-top {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        .food-title {
+          font-weight: 600;
+          font-size: 16px;
+          padding-left: 5px;
+        }
+
+        .food-desc {
+          font-weight: 400;
+          font-size: 14px;
+          padding-top: 10px;
+          word-break: break-all;
+          -webkit-box-orient: vertical;
+          display: -webkit-box;
+          overflow: hidden !important;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 3;
+          padding: 0 5px;
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .food-bottom {
+      display: flex;
+      justify-content: space-between;
+      margin-top: auto;
+      flex-shrink: 0;
+
+      .food-place {
+        display: flex;
+        padding-top: 20px;
+        padding-left: 5px;
+
+        span {
+          font-size: 14px;
+        }
+      }
+
+      .food-price {
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--primary-color);
+        padding: 10px 5px ;
+      }
+    }
+  }
+}
+
+.paginationBttns {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+
+  li {
+    padding: 8px 8px;
+    font-size: 12px;
+    margin: 0px 8px;
+    border-radius: 4px;
+    box-shadow: 0 3px 10px rgba($color: #000000, $alpha: 0.15);
+    height: 100%;
+    transition: all 0.2s ease;
+
+
+  }
+}
+
+.paginationBttns a {
+  padding: 8px 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.paginationBttns a:hover {
+  color: grey;
+}
+
+.paginationActive  {
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.paginationDisabled  {
+  color: rgb(63, 80, 64);
+  background-color: rgb(190, 192, 188);
+}
+

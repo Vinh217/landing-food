@@ -1,0 +1,61 @@
+.order-search {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+
+  &-form {
+    flex: 1;
+    position: relative;
+
+    input {
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid rgba($color: #000000, $alpha: 0.4);
+      width: 100%;
+      background: var(--background-color);
+      border-radius: 50px;
+    }
+    input:focus {
+      outline: none;
+    }
+
+    button {
+      color: white;
+      font-size: 17px;
+      cursor: pointer;
+      border: none;
+      position: absolute;
+      transform: translate(-40px,10px);
+
+      .order-icon {
+        font-size: 25px;
+        color: rgba($color: #000000, $alpha: 0.4);
+      }
+    }
+  }
+  .custom-select {
+    padding: 0 50px;
+    select {
+      width: 200px;
+      height: 30px;
+      background-color: var(--background-color);
+      border-radius: 50px;
+      cursor: pointer;
+    }
+
+    select:focus {
+      outline: none;
+    }
+  }
+
+  .order-display-types {
+    svg {
+      width: 30px;
+      height: 30px;
+      fill: black;
+      cursor: pointer;
+    }
+
+  }
+
+}
